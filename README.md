@@ -8,7 +8,8 @@ There's still some room for improvement, and this extension adds some quality-of
 ### Dark Theme (beta)
 The extension can apply a dark theme to TeamDynamix. 
 
-![Dark Mode screenshot](https://user-images.githubusercontent.com/5050363/207781254-7a40d991-70d3-48af-95c9-b2f7af1992e9.png)
+![Dark Mode screenshot](https://user-images.githubusercontent.com/5050363/207781780-dff86177-9ddc-4fa1-a22e-274ea539d4fe.jpg)
+
 
 There is a 100% chance that there are areas of TeamDynamix that I didn't explore while creating this feature 
 and therefore there will be some UI anomalies. If there is any part of the application that is completely illegible as a result of the new theming, disable the
