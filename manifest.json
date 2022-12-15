@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Northwestern TDx Extension",
+  "version": "0.1.0",
+  "description": "Add functionality and features to TDx",
+  "action": {
+    "default_icon": {
+      "16": "assets/images/td-16.png",
+      "32": "assets/images/td-32.png",
+      "48": "assets/images/td-48.png"
+    }
+  },
+  "icons": {
+    "16": "assets/images/td-16.png",
+    "32": "assets/images/td-32.png",
+    "48": "assets/images/td-48.png",
+    "128": "assets/images/td-128.png"
+  },
+  "author": "Spencer Colton",
+  "content_scripts": [
+    {
+      "matches": ["https://services.northwestern.edu/TDNext/*"],
+      "js": ["assets/scripts/tabs.js", "assets/scripts/hilite.js", "assets/scripts/favicon.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "assets/images/*", "assets/stylesheets/*" ],
+      "matches": [ "https://services.northwestern.edu/*" ]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "permissions": ["storage", "scripting", "activeTab", "webNavigation", "contextMenus"],
+  "host_permissions": ["https://services.northwestern.edu/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "omnibox": {
+    "keyword": "tdx"
+  }
+}
