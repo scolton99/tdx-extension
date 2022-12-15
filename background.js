@@ -1,6 +1,6 @@
 chrome.webNavigation.onCommitted.addListener(({ tabId, url }) => {
   console.log(url);
-  if (!url.startsWith("https://services.northwestern.edu/"))
+  if (!url.startsWith("https://services.northwestern.edu/TDNext"))
     return;
 
   chrome.storage.sync.get({
