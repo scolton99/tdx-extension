@@ -62,7 +62,7 @@ Type "tdx" and a space into the Chrome omnibox and then type a ticket number and
 You can also select text on a webpage corresponding to a ticket number, then right-click and "Jump to TDx ticket".
 
 ## Installation
-The extension is available for installation in Google Chrome [here](#).
+The extension is available for installation in Google Chrome [here](https://chrome.google.com/webstore/detail/northwestern-tdx-extensio/hfdhbgifcpjinackmfdhlnockkjogbci?hl=en&authuser=0).
 
 ## Usage
 Adjusting the extension's settings can be done as follows:
