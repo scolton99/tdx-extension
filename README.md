@@ -8,7 +8,7 @@ There's still some room for improvement, and this extension adds some quality-of
 ### Dark Theme (beta)
 The extension can apply a dark theme to TeamDynamix. 
 
-
+![Dark Mode screenshot](https://user-images.githubusercontent.com/5050363/207781254-7a40d991-70d3-48af-95c9-b2f7af1992e9.png)
 
 There is a 100% chance that there are areas of TeamDynamix that I didn't explore while creating this feature 
 and therefore there will be some UI anomalies. If there is any part of the application that is completely illegible as a result of the new theming, disable the
@@ -65,6 +65,9 @@ The extension is available for installation in Google Chrome [here](#).
 
 ## Usage
 Adjusting the extension's settings can be done as follows:
+
+![Select "Extensions" on the Chrome menu bar, then click the three dots next to "Northwestern TDx Extension", then select "Options"](https://user-images.githubusercontent.com/5050363/207781300-6a33936d-80b8-4603-886a-11fc5082b9bd.png)
+
 
 ## Contributing
 Please feel free to submit [bug reports](https://github.com/scolton99/tdx-extension/issues), [feature requests](https://github.com/scolton99/tdx-extension/issues), or pull requests to this repository.
