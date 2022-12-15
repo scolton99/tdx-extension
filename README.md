@@ -8,6 +8,7 @@ There's still some room for improvement, and this extension adds some quality-of
 ### Dark Theme (beta)
 The extension can apply a dark theme to TeamDynamix. 
 
+![Dark Mode screenshot](https://user-images.githubusercontent.com/5050363/207781780-dff86177-9ddc-4fa1-a22e-274ea539d4fe.jpg)
 
 
 There is a 100% chance that there are areas of TeamDynamix that I didn't explore while creating this feature 
@@ -61,10 +62,13 @@ Type "tdx" and a space into the Chrome omnibox and then type a ticket number and
 You can also select text on a webpage corresponding to a ticket number, then right-click and "Jump to TDx ticket".
 
 ## Installation
-The extension is available for installation in Google Chrome [here](#).
+The extension is available for installation in Google Chrome [here](https://chrome.google.com/webstore/detail/northwestern-tdx-extensio/hfdhbgifcpjinackmfdhlnockkjogbci?hl=en&authuser=0).
 
 ## Usage
 Adjusting the extension's settings can be done as follows:
+
+![Select "Extensions" on the Chrome menu bar, then click the three dots next to "Northwestern TDx Extension", then select "Options"](https://user-images.githubusercontent.com/5050363/207781300-6a33936d-80b8-4603-886a-11fc5082b9bd.png)
+
 
 ## Contributing
 Please feel free to submit [bug reports](https://github.com/scolton99/tdx-extension/issues), [feature requests](https://github.com/scolton99/tdx-extension/issues), or pull requests to this repository.
