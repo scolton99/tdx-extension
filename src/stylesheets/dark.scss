@@ -105,6 +105,7 @@ button:not(base).glyph {
 
 .btn-default:not(base) {
   background-color: $medium;
+  color: $text-light;
 
   &:hover {
     border-color: $light;
@@ -330,7 +331,7 @@ li.open > a#aSettings > span.fa {
   }
 }
 
-#taluOwner_btnLookuptaluOwner > span.fa {
+#taluOwner_btnLookuptaluOwner > span.fa, a > span.fa-search.fa.blue, #luServiceLevelAgreements_btnLookupluServiceLevelAgreements > span.fa {
   color: $text-theme-light !important;
 }
 
@@ -604,7 +605,7 @@ ol, ul {
   }
 }
 
-#divComment {
+#divComment, #divFilter {
   background-color: $dark;
 
   button.ms-choice {
@@ -614,8 +615,36 @@ ol, ul {
   .ms-drop {
     background-color: $medium;
   }
+
+  .modal-content {
+    background-color: $dark;
+  }
 }
 
 .progress-box-body .well {
+  background-color: $dark;
+}
+
+#divFilter {
+  .modal-header {
+    background-color: $dark;
+  }
+
+  .modal-body {
+    background-color: $dark;
+
+    .filter-section {
+      background-color: transparent;
+    }
+  }
+}
+
+.nav-pills:not(base) > li.active > a {
+  &, &:focus {
+    background-color: $theme-medium;
+  }
+}
+
+#divSaveSearch .modal-content {
   background-color: $dark;
 }
