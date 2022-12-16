@@ -589,3 +589,29 @@ span.feed-private[title]:not(base):not(a) {
 .layout-entry:not(base) {
   background-color: $dark;
 }
+
+body div.feed-child-box.feed-reply:not(base) {
+  background-color: $dark;
+}
+
+ol, ul {
+  &.breadcrumb {
+    background-color: transparent;
+    
+    > .active {
+      color: $text-light;
+    }
+  }
+}
+
+#divComment {
+  background-color: $dark;
+
+  button.ms-choice {
+    background-color: $medium;
+  }
+
+  .ms-drop {
+    background-color: $medium;
+  }
+}
