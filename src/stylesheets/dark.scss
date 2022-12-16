@@ -581,3 +581,11 @@ button.nav1:not(base) {
 span.feed-private[title]:not(base):not(a) {
   color: $text-medium-light;
 }
+
+#divLayout.modal-overlay {
+  background-color: $darkest;
+}
+
+.layout-entry:not(base) {
+  background-color: $dark;
+}
