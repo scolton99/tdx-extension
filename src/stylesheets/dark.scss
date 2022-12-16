@@ -79,12 +79,9 @@ button:not(base).glyph {
   }
 }
 
-select.form-control:not(base) {
-  color: $text-light;
-}
-
 .form-control:not(base) {
   background-color: $medium;
+  color: $text-light;
 
   &:focus {
     border-color: $theme-light;
