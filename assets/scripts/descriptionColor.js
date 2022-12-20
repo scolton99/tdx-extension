@@ -38,7 +38,7 @@ const fixDescription = async () => {
 };
 
 const fixFeedItems = async () => {
-  const feedItems = document.querySelectorAll('.feed-body .feed-child-box:not([data-fixed="true"])');
+  const feedItems = document.querySelectorAll('.feed-body .feed-child-box:not([data-fixed="true"]), .feed-body .WordSection1:not([data-fixed="true"])');
   for (const item of Array.from(feedItems)) {
     item.dataset.fixed = 'true';
     const descendants = item.getElementsByTagName('*');
