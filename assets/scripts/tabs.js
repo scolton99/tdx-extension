@@ -42,6 +42,9 @@
       if (!sub) {
         newEl.firstElementChild.removeAttribute('onclick');
         newEl.firstElementChild.setAttribute('href', path);
+
+        if (path.includes('Tickets/Update'))
+          newEl.firstElementChild.setAttribute('target', '_blank');
       } else {
         newEl.setAttribute('href', path);
       }
@@ -69,3 +72,14 @@
   
   observer.observe(document.body, { subtree: true, childlist: true, attributes: true });
 })();
+
+chrome.storage.sync.get({ 
+  searchTabs: false
+}, ({ searchTabs }) => {
+  if (!searchTabs)
+    return;
+
+  const script = document.createElement('script');
+  script.src = chrome.runtime.getURL('assets/scripts/search.js');
+  document.documentElement.appendChild(script);
+});

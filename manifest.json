@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Northwestern TDx Extension",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Add functionality and features to TDx",
   "action": {
     "default_icon": {
@@ -20,14 +20,14 @@
   "content_scripts": [
     {
       "matches": ["https://services.northwestern.edu/TDNext/*"],
-      "js": ["assets/scripts/tinycolor.js", "assets/scripts/tabs.js", "assets/scripts/hilite.js", "assets/scripts/favicon.js", "assets/scripts/descriptionColor.js"],
+      "js": ["assets/scripts/tinycolor.js", "assets/scripts/tabs.js", "assets/scripts/hilite.js", "assets/scripts/favicon.js", "assets/scripts/descriptionColor.js", "assets/scripts/autoRefresh.js"],
       "run_at": "document_end",
       "all_frames": true
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [ "assets/images/*", "assets/stylesheets/*", "assets/scripts/tinycolor.js" ],
+      "resources": [ "assets/images/*", "assets/stylesheets/*", "assets/scripts/tinycolor.js", "assets/scripts/search.js" ],
       "matches": [ "https://services.northwestern.edu/*" ]
     }
   ],
