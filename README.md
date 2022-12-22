@@ -18,7 +18,7 @@ repository with as much detail as possible.
 
 **Note:** Dark mode will affect printing tickets. In order to print tickets such that they are still readable, you will have to uncheck "Background graphics" in the print dialog.
 
-### Fewer New Windows (alpha)
+### Fewer New Windows (beta)
 TeamDynamix _loves_ to create new windows instead of new tabs. Much of the web application has been specifically 
 coded to always create a new window and not to allow for any override to open in a new tab instead.
 
@@ -30,7 +30,7 @@ The extension makes the following changes to what opens in new windows vs. new t
 | --- | --- | --- |
 | Open ticket from a report or filter | New window | New tab |
 | Open your user profile | New window | New tab |
-| Update/edit a ticket | New window | **Same** tab |
+| Update/edit a ticket | New window | New tab |
 | Generate Bomgar session | New window | New tab |
 | Reassign service request | New window | **Same** tab |
 | Edit classification | New window | **Same** tab | 
@@ -51,7 +51,16 @@ The extension makes the following changes to what opens in new windows vs. new t
 | Edit desktop | New window | New tab |
 | New ticket | New window | New tab |
 
-This feature can be disabled in the extension options.
+This feature can be disabled in the extension options. 
+
+#### Search Ticket New Tab (alpha)
+Searching for a ticket number in the top-level search bar in TDx will open the search results in a new window by default. There is a setting in the extension options that will allow you to override this behavior and instead cause searched tickets to be opened in a new tab.
+
+### Auto-refresh Desktop Modules
+There is now a setting that will enable you to automatically reload the tickets in desktop modules (any widget that looks like the picture below):
+![image](https://user-images.githubusercontent.com/5050363/209190030-cc0df80b-a2c0-4e18-97a0-70bece3598bb.png)
+
+There is an option in the settings to enable/disable this behavior. It is enabled by default. The widgets will each refresh simultaneously every 2 minutes when the setting is enabled.
 
 ### New Favicon
 The extension can apply a new, NU purple-themed favicon to TeamDynamix pages. This can be disabled in the extension options.
