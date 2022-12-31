@@ -5,7 +5,7 @@ import {
   updateFavicon,
   searchTabs,
   autoRefresh,
-} from "~/entries/content-script";
+} from "~/entries/content-scripts";
 
 const [currentExtensionConfig_, previousExtensionConfig_] = withPrevious<
   Record<FeatureKey, boolean>

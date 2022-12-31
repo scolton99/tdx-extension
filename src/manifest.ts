@@ -20,7 +20,7 @@ const sharedManifest = {
   },
   content_scripts: [
     {
-      js: ["src/entries/content-script/main.ts"],
+      js: ["src/entries/content-scripts/main.ts"],
       matches: ["https://services.northwestern.edu/TDNext/*"],
       run_at: "document_start",
       all_frames: true,
