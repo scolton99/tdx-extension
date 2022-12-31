@@ -17,7 +17,13 @@ const [currentExtensionConfig_, previousExtensionConfig_] = withPrevious<
   autoRefresh: true,
 });
 
-export const configHandler = {
+enum Category {
+  APPEARANCE = "appearance",
+  IMPROVEMENTS = "improvements",
+  FEATURES = "features",
+}
+
+export const configHandler: Record<FeatureKey, FeatureDetails> = {
   darkTheme: {
     name: "Dark Theme",
     description: "Enable a Northwestern-styled dark theme",

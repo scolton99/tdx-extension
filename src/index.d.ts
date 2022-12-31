@@ -1,18 +1,18 @@
-type FeatureKey = keyof typeof configHandler;
+declare global {
+  import { configHandler } from "$lib/store";
 
-interface FeatureDetails {
-  name: string;
-  description: string;
-  category: Category;
-  exec(): void;
+  type FeatureKey = keyof typeof configHandler;
+
+  interface FeatureDetails {
+    name: string;
+    description: string;
+    category: Category;
+    exec(): void;
+  }
+
+  type ExtensionConfig = {
+    [key in FeatureKey]: boolean;
+  };
 }
 
-type ExtensionConfig = {
-  [key in FeatureKey]: boolean;
-};
-
-enum Category {
-  APPEARANCE = "appearance",
-  IMPROVEMENTS = "improvements",
-  FEATURES = "features",
-}
+export {};
