@@ -1,0 +1,705 @@
+$darkest: #202124;
+$dark: #33353a;
+$medium: #5e616b;
+$light: #ced1db;
+
+$theme-medium: #4e2a84;
+$theme-light: #b6acd1;
+
+$text-dark: #202124;
+$text-medium-light: #999;
+$text-light: #ccc;
+$text-highlight: #eee;
+
+$text-theme-medium: #836eaa;
+$text-theme-light: #b6acd1;
+$text-theme-highlight: rgb(204, 196, 223);
+
+$text-error: #f72825;
+
+* {
+  color: $text-light;
+}
+
+input[type="text"] {
+  background-color: $medium;
+  color: $text-light;
+  border-color: $text-light;
+}
+
+a:not(base) {
+  &,
+  &:focus,
+  &:hover {
+    color: $text-theme-light;
+  }
+}
+
+.btn-link:not(base) {
+  color: $text-theme-light;
+}
+
+.h1,
+h1,
+.h2,
+h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  &:not(base) {
+    color: $text-light;
+
+    &.panel-title {
+      color: $text-light;
+    }
+  }
+}
+
+.selected:not(base) {
+  background-color: $medium;
+
+  &,
+  > * {
+    color: $text-highlight;
+  }
+}
+
+.alert * {
+  color: inherit;
+}
+
+.gray:not(base) {
+  color: $text-medium-light !important;
+}
+
+button:not(base).glyph {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAMAAAAmRK2vAAADAFBMVEX////X19fPz8/Ly8vIyMjHx8eysrKgoKCdnZ2UlJSQkJCOjo6MjIyFhYUzMzP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////88QS3UAAABAHRSTlP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AU/cHJQAAAAlwSFlzAAALEwAACxMBAJqcGAAABO5pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2YsIDIwMjIvMDgvMTYtMTg6MDI6NDMgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNC4xIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjItMTItMTRUMTE6NTc6MDgtMDY6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIyLTEyLTE0VDEyOjAwOjA2LTA2OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIyLTEyLTE0VDEyOjAwOjA2LTA2OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmMjI3MmQxYy1iYzAwLTViNDUtOWQ5ZS0zYjJiMWJjMTFlZDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZjIyNzJkMWMtYmMwMC01YjQ1LTlkOWUtM2IyYjFiYzExZWQwIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZjIyNzJkMWMtYmMwMC01YjQ1LTlkOWUtM2IyYjFiYzExZWQwIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmMjI3MmQxYy1iYzAwLTViNDUtOWQ5ZS0zYjJiMWJjMTFlZDAiIHN0RXZ0OndoZW49IjIwMjItMTItMTRUMTE6NTc6MDgtMDY6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyNC4xIChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5k1gFnAAAAOElEQVQImT3HQQ6AIBAEwd7ZDYLo/5+KiYnDzboV7bbtqMgFor0dKJ+6TNkj5r+Zh5366gGpL2ADUwMRf0SFf2MAAAAASUVORK5CYII=");
+
+  &:focus,
+  &:hover {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAJCAYAAAARml2dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE7mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4wLWMwMDAgNzkuMTcxYzI3ZiwgMjAyMi8wOC8xNi0xODowMjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjEgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0xMi0xNFQxMzoyOToyNS0wNjowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMTItMTRUMTM6MzA6NDUtMDY6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMTItMTRUMTM6MzA6NDUtMDY6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNhYzlkMjllLThiMDAtOGI0Ny1iNThiLTIwNzBlNWEzZTc1YiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozYWM5ZDI5ZS04YjAwLThiNDctYjU4Yi0yMDcwZTVhM2U3NWIiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDozYWM5ZDI5ZS04YjAwLThiNDctYjU4Yi0yMDcwZTVhM2U3NWIiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjNhYzlkMjllLThiMDAtOGI0Ny1iNThiLTIwNzBlNWEzZTc1YiIgc3RFdnQ6d2hlbj0iMjAyMi0xMi0xNFQxMzoyOToyNS0wNjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjEgKFdpbmRvd3MpIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pqp9unYAAACcSURBVAiZVcyxCoJgGIXhVxF+J5GCwNRw9W6khqjF7kxqiFrschyTfs1oMHDS6WtK7MBZzgOHLLnL7fAREWFas+s6tNZc929hEhPA932a5sll95I/UEoRhiuqqiJPWxkBwLYVURRRFAV52soIfT9QliVxHLM5zQ0TYBgGtH4QBAHr48wAsADqusbzlmzPC+P3YDmOg+u6JJk7jgBfbwQ/lygRnbUAAAAASUVORK5CYII=");
+  }
+
+  &.expanded {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAADAFBMVEX////Z2dmmpqZ3d3dFRUX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8u7RFBAAABAHRSTlP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AU/cHJQAAAAlwSFlzAAALEwAACxMBAJqcGAAABO5pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2YsIDIwMjIvMDgvMTYtMTg6MDI6NDMgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNC4xIChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjItMTItMTRUMTE6NTc6MTEtMDY6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIyLTEyLTE0VDEyOjAwOjMyLTA2OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIyLTEyLTE0VDEyOjAwOjMyLTA2OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDplYzdkYzY3Yi05ZTk0LTAyNDMtYTIxYy1lYTY5N2Y2YWJmYjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZWM3ZGM2N2ItOWU5NC0wMjQzLWEyMWMtZWE2OTdmNmFiZmI5IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZWM3ZGM2N2ItOWU5NC0wMjQzLWEyMWMtZWE2OTdmNmFiZmI5Ij4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDplYzdkYzY3Yi05ZTk0LTAyNDMtYTIxYy1lYTY5N2Y2YWJmYjkiIHN0RXZ0OndoZW49IjIwMjItMTItMTRUMTE6NTc6MTEtMDY6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyNC4xIChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7k6MCbAAAAJElEQVQImQXBgQ0AMAgDIOr0/4uNgxzmGrOK2SizIb3hXg71AbCuCBziu9eMAAAAAElFTkSuQmCC");
+
+    &:focus,
+    &:hover {
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE7mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4wLWMwMDAgNzkuMTcxYzI3ZiwgMjAyMi8wOC8xNi0xODowMjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjEgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMi0xMi0xNFQxMzoyOToyMi0wNjowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjItMTItMTRUMTM6MzA6NDEtMDY6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjItMTItMTRUMTM6MzA6NDEtMDY6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjc4MDc5OTgwLTVjNTgtNjc0ZS1hNWFjLWNhNTQ3YjIyMjFkMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3ODA3OTk4MC01YzU4LTY3NGUtYTVhYy1jYTU0N2IyMjIxZDEiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3ODA3OTk4MC01YzU4LTY3NGUtYTVhYy1jYTU0N2IyMjIxZDEiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjc4MDc5OTgwLTVjNTgtNjc0ZS1hNWFjLWNhNTQ3YjIyMjFkMSIgc3RFdnQ6d2hlbj0iMjAyMi0xMi0xNFQxMzoyOToyMi0wNjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjEgKFdpbmRvd3MpIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpO+WtcAAABJSURBVAiZZckxGYAwDAXhg9YBVEPEoAFVaMqEBhT0zV3DBnzhxv+miODbsV0hiZrR3QGYM7a2viMjQFnO/YdjDKokAHrXM8yMG2qEJceHrLjgAAAAAElFTkSuQmCC");
+    }
+  }
+}
+
+.form-control:not(base) {
+  background-color: $medium;
+  color: $text-light;
+
+  &:focus {
+    border-color: $theme-light;
+  }
+
+  &[readonly] {
+    background-color: $dark;
+    color: $text-light;
+  }
+}
+
+.btn-primary:not(#btnSearch) {
+  background-color: $theme-medium !important;
+  border-color: $theme-medium !important;
+}
+
+.input-group-btn:not(base) .btn-default {
+  background-color: $medium;
+  color: $text-light;
+}
+
+.btn-default:not(base) {
+  background-color: $medium;
+  color: $text-light;
+
+  &:hover {
+    border-color: $light;
+  }
+
+  &:active:focus {
+    background-color: $medium;
+  }
+}
+
+body,
+#divTabHeader,
+#divLeft {
+  background-color: $darkest !important;
+}
+
+.organization-link > a {
+  color: $text-theme-highlight;
+  font-family: Campton, "Segoe UI", "Open Sans", Arial, sans-serif;
+}
+
+#divHeader {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  background-color: $darkest !important;
+}
+
+form[action*="TicketDet"] #divHeader {
+  padding: 0;
+}
+
+form[action*="TicketSearch"] #divHeader {
+  padding: 5px;
+}
+
+#divTabHeader,
+.TabButtonCell:not(base) {
+  background-color: $dark !important;
+}
+
+#tabsList {
+  background-color: $darkest;
+
+  > li {
+    color: $text-light;
+  }
+
+  > li.ui-tabs-active,
+  > li.ui-state-active {
+    background-color: $dark;
+  }
+}
+
+#ddlDesktops {
+  background-color: $dark;
+  color: $text-light;
+}
+
+#divLeft {
+  background-color: $darkest;
+
+  .nav1,
+  .nav2,
+  .nav3 {
+    background-color: transparent;
+  }
+}
+
+#tabs {
+  &,
+  &.ui-widget-content {
+    background-color: $darkest !important;
+    background-image: none;
+  }
+}
+
+#dropdownMenu1 {
+  color: $text-light !important;
+
+  &:active,
+  &:focus-visible,
+  &:focus {
+    border: none !important;
+    outline: none;
+  }
+}
+
+ul.user-profile-menu {
+  background-color: $darkest;
+  border: 1px solid $medium;
+
+  > li,
+  > li > a {
+    color: $text-light !important;
+  }
+}
+
+#btnSearch,
+#btnTicketLookup {
+  background-color: $medium;
+
+  > span.fa {
+    color: $text-theme-highlight !important;
+  }
+}
+
+.desktop-module {
+  > .panel-heading.module-header {
+    color: $text-light;
+  }
+
+  &.panel,
+  &.panel > .panel-heading {
+    background-color: $dark;
+  }
+}
+
+.module-header span {
+  color: $text-light !important;
+}
+
+table {
+  > tbody,
+  > thead {
+    tr.TDGridHeader {
+      background-color: $dark;
+      border-color: $medium;
+
+      > td {
+        color: $text-light;
+        border-color: $medium;
+      }
+    }
+  }
+
+  &.table:not(p) {
+    border-color: $medium;
+
+    > tbody {
+      > tr,
+      > tr.TDGridHeader {
+        > td,
+        > th {
+          border-color: $medium;
+        }
+      }
+    }
+  }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd):not(a) {
+  background-color: $dark;
+}
+
+.panel-default:not(base) {
+  &,
+  > .panel-heading {
+    border-color: $medium;
+  }
+
+  > .panel-heading {
+    background-color: $dark;
+  }
+}
+
+ul.nav-pills:not(base) li.dropdown button.dropdown-toggle:hover,
+.nav:not(base) > li > a:hover {
+  background-color: #ced1db;
+
+  &,
+  span {
+    color: $text-dark;
+  }
+}
+
+.nav:not(base) {
+  > li.open > a span {
+    color: $text-dark;
+  }
+
+  .open > a:focus {
+    background-color: $light;
+  }
+}
+
+li.open > a#aSettings > span.fa {
+  color: $text-dark;
+}
+
+.btn-link:not(base) {
+  &:focus,
+  &:hover {
+    color: $text-theme-highlight;
+  }
+}
+
+.text,
+.report-text {
+  &:not(base) {
+    &:hover,
+    &:active {
+      background-color: $medium;
+    }
+  }
+}
+
+.dropdown-menu:not(base) {
+  background-color: $darkest;
+  border: 1px solid $medium;
+
+  * {
+    color: $text-light;
+  }
+
+  > li > a {
+    color: $text-light;
+
+    &:hover {
+      background-color: $medium;
+      color: $text-light;
+    }
+  }
+
+  > span > li {
+    &,
+    > a {
+      &:focus,
+      &:hover {
+        background-color: $medium;
+      }
+    }
+  }
+
+  .divider {
+    background-color: $medium;
+  }
+}
+
+.ButtonCellTop:not(base) {
+  background-color: $darkest;
+}
+
+.control-label,
+label {
+  &:not(base) {
+    color: $text-light;
+  }
+}
+
+#taluOwner_btnLookuptaluOwner > span.fa,
+a > span.fa-search.fa.blue,
+#luServiceLevelAgreements_btnLookupluServiceLevelAgreements > span.fa {
+  color: $text-theme-light !important;
+}
+
+#taluOwner_btnCleartaluOwner,
+button[data-lookupaction="clear"] {
+  > span.fa {
+    color: $text-error !important;
+  }
+}
+
+button[data-lookupaction="select"] > span.fa {
+  color: $text-theme-light !important;
+}
+
+.talu_holder:not(base) {
+  border-color: $light;
+
+  &.holder-focused {
+    outline: none;
+    border-color: $theme-light;
+  }
+
+  .luac_default {
+    color: $text-light;
+  }
+
+  .bit-box {
+    background-color: $light;
+    color: $text-dark;
+  }
+}
+
+.lu_tdac-auto:not(base) {
+  ul {
+    background-color: $darkest !important;
+
+    .auto-focus {
+      background-color: $theme-medium;
+    }
+
+    li div.talu_subcaption {
+      color: $text-medium-light;
+    }
+  }
+}
+
+div.ReportGroupName:not(base) {
+  background-color: $medium !important;
+  color: $text-highlight !important;
+  border-color: $medium;
+  font-weight: bold;
+}
+
+.table-bordered:not(base) > tbody > tr {
+  > td,
+  > th {
+    border-color: $medium;
+  }
+}
+
+.select2-container:not(base) {
+  &.form-control {
+    background-color: $medium;
+  }
+
+  .select2-choice {
+    background-color: $medium;
+  }
+
+  .select2-choices {
+    background-color: $medium;
+
+    .select2-search-field input {
+      background-color: $medium;
+      color: $text-light;
+
+      &.select2-active {
+        background-color: $medium !important;
+        color: $text-light;
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+.select2-container-multi:not(base) {
+  &.select2-container-active .select2-choices {
+    border-color: $theme-light;
+  }
+
+  .select2-choices .select2-search-choice {
+    background-color: $light;
+
+    * {
+      color: $text-dark;
+    }
+  }
+}
+
+.select2-search:not(base) input {
+  &,
+  &.select2-active {
+    background-color: $medium;
+    background-image: none;
+    color: $text-light;
+  }
+}
+
+.select2-drop:not(base) {
+  background-color: $darkest;
+}
+
+.select2-drop-active:not(base) {
+  border-color: $theme-light;
+}
+
+#thTicket_lblStatus,
+#ctl00_lblStatus {
+  color: $text-theme-light !important;
+}
+
+.panel:not(base) {
+  background-color: $dark;
+
+  .black {
+    color: $text-light !important;
+  }
+}
+
+.nav-tabs:not(base) > li.active a {
+  background-color: $light;
+  color: $text-dark;
+}
+
+.copyButton:not(base) {
+  &,
+  &:hover {
+    background-color: $medium;
+  }
+}
+
+.active [id^="tdtTabs_lbl"] {
+  color: $text-dark;
+}
+
+button.nav1:not(base) {
+  font-weight: bold;
+}
+
+.hilite:not(base) {
+  td,
+  a {
+    background-color: $theme-medium;
+  }
+}
+
+.open:not(base) > .dropdown-toggle.btn-default {
+  &:focus,
+  &:hover {
+    background-color: $medium;
+  }
+}
+
+.ui-layout-pane:not(base) {
+  background-color: $darkest;
+  background-image: none;
+}
+
+.TDFooterRow:not(base) {
+  background-color: $darkest;
+}
+
+.pagination:not(base) > .active > span {
+  &,
+  &:hover,
+  &:focus {
+    background-color: $medium;
+    border-color: $medium;
+  }
+}
+
+#pageSizeLabel {
+  background-color: $medium !important;
+  color: $text-light;
+}
+
+#divMstrHeader {
+  background-color: $darkest !important;
+}
+
+.dropdown-menu:not(base) > span > li > a {
+  color: $text-medium-light;
+}
+
+.Module:not(base) {
+  background-color: $dark;
+
+  .btn {
+    background-color: $medium;
+  }
+}
+
+.Module-rpt:not(base) {
+  border-color: $theme-light;
+}
+
+.list-group-item:not(base) {
+  background-color: $dark;
+}
+
+#ApplicationsMenu:not(base) {
+  background-color: $darkest;
+  border: 1px solid $medium;
+}
+
+.panel-app:not(base):hover {
+  background-color: $medium;
+}
+
+.panel-footer:not(base) {
+  background-color: $dark;
+  border-color: $medium;
+}
+
+.border-bottom,
+.border-top {
+  &:not(base) {
+    border-color: $medium;
+  }
+}
+
+.block-actions:not(base) {
+  background-color: $dark;
+
+  .btn.btn-link {
+    color: $text-theme-light;
+
+    > span.fa.blue {
+      color: $text-theme-light !important;
+    }
+  }
+}
+
+#divTasks {
+  .fa.blue {
+    color: $text-theme-light !important;
+  }
+
+  .fa.green {
+    color: $text-theme-medium !important;
+  }
+}
+
+#divWorkflow .fa.blue.fa-minus {
+  color: $text-theme-light !important;
+}
+
+span.feed-private[title]:not(base):not(a) {
+  color: $text-medium-light;
+}
+
+#divLayout.modal-overlay {
+  background-color: $darkest;
+}
+
+.layout-entry:not(base) {
+  background-color: $dark;
+}
+
+body div.feed-child-box.feed-reply:not(base) {
+  background-color: $dark;
+}
+
+ol,
+ul {
+  &.breadcrumb {
+    background-color: transparent;
+
+    > .active {
+      color: $text-light;
+    }
+  }
+}
+
+#divComment,
+#divFilter {
+  background-color: $dark;
+
+  button.ms-choice {
+    background-color: $medium;
+  }
+
+  .ms-drop {
+    background-color: $medium;
+  }
+
+  .modal-content {
+    background-color: $dark;
+  }
+}
+
+.progress-box-body .well {
+  background-color: $dark;
+}
+
+#divFilter {
+  .modal-header {
+    background-color: $dark;
+  }
+
+  .modal-body {
+    background-color: $dark;
+
+    .filter-section {
+      background-color: transparent;
+    }
+  }
+}
+
+.nav-pills:not(base) > li.active > a {
+  &,
+  &:focus {
+    background-color: $theme-medium;
+  }
+}
+
+#divSaveSearch .modal-content {
+  background-color: $dark;
+}
