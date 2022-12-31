@@ -34,15 +34,6 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         output: {
           assetFileNames: `[name].[ext]`,
-          // assetFileNames: (assetInfo) => {
-          //   if (
-          //     assetInfo.name?.includes("background.css") ||
-          //     assetInfo.name?.includes("serviceWorker.css")
-          //   ) {
-          //     return "dark.css";
-          //   }
-          //   return assetInfo.name!;
-          // },
         },
       },
     },
