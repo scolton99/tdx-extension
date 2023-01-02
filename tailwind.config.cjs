@@ -13,14 +13,5 @@ module.exports = {
     },
   },
   content: ["./src/**/*.{html,js,svelte,ts}"],
-  plugins: [
-    require("@tailwindcss/typography"),
-    plugin(function ({ addVariant, e }) {
-      addVariant("not-first", ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.${e(`not-first${separator}${className}`)}:not(:first-child)`;
-        });
-      });
-    }),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };
