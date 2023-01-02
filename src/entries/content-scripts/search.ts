@@ -1,15 +1,11 @@
 export default async function searchTabs() {
   document.addEventListener("DOMContentLoaded", () => {
     const searchButton = document.getElementById("btnSearch");
-    searchButton.removeAttribute("onclick");
+    searchButton.setAttribute("onclick", "searchTabs()");
 
-    const newSearchButton = <HTMLElement>searchButton.cloneNode(true);
-    newSearchButton.setAttribute("onclick", "searchTabs()");
-    searchButton.parentNode.replaceChild(newSearchButton, searchButton);
-
-    const newScript = document.createElement("script");
-    newScript.type = "text/javascript";
-    newScript.innerHTML = `
+    const searchTabs = document.createElement("script");
+    searchTabs.type = "text/javascript";
+    searchTabs.innerHTML = `
     function searchTabs() {
       const searchText = $("#txtItemIDLookup").val().trim();
       const isInteger = /^\\d*$/.test(searchText);
@@ -30,6 +26,6 @@ export default async function searchTabs() {
     }
     `;
 
-    document.head.appendChild(newScript);
+    document.head.appendChild(searchTabs);
   });
 }
