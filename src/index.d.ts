@@ -1,5 +1,6 @@
 declare global {
   import { configHandler } from "$lib/store";
+  import { Category } from "$lib/store";
 
   type FeatureKey = keyof typeof configHandler;
 

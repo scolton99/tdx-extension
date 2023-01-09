@@ -17,7 +17,7 @@ const [currentExtensionConfig_, previousExtensionConfig_] = withPrevious<
   autoRefresh: true,
 });
 
-enum Category {
+export enum Category {
   APPEARANCE = "appearance",
   IMPROVEMENTS = "improvements",
   FEATURES = "features",
