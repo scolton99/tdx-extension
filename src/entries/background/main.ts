@@ -18,10 +18,11 @@ runtime.onInstalled.addListener(async () => {
 webNavigation.onCommitted.addListener(async ({ tabId, url }) => {
   if (!url.startsWith("https://services.northwestern.edu/TDNext")) return;
 
-  const manifestVersion = runtime.getManifest().manifest_version;
-  if (manifestVersion === 3 && (await featureIsEnabled("darkTheme"))) {
+  if (await featureIsEnabled("darkTheme")) {
+    const manifestVersion = runtime.getManifest().manifest_version;
+    const file = manifestVersion === 3 ? "main.css" : "background.css";
     scripting.insertCSS({
-      files: ["background.css"],
+      files: [file],
       target: { allFrames: true, tabId: tabId },
     });
   }
