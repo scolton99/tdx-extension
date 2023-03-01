@@ -62,7 +62,7 @@ export const ManifestV3 = {
   host_permissions: ["https://services.northwestern.edu/*"],
   web_accessible_resources: [
     {
-      resources: ["icons/*", "background.css"],
+      resources: ["icons/*", "main.css"],
       matches: ["https://services.northwestern.edu/*"],
     },
   ],
