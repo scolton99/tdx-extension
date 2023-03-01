@@ -1,0 +1,57 @@
+{
+  "name": "tdx-extension",
+  "displayName": "Northwestern TDx Extension",
+  "version": "0.4.0",
+  "description": "Add functionality and features to TDx",
+  "author": "Spencer Colton",
+  "contributors": [
+    {
+      "name": "Danny Foster",
+      "email": "danny.foster@northwestern.edu"
+    }
+  ],
+  "type": "module",
+  "scripts": {
+    "build:chromium": "vite build --mode chromium",
+    "build:firefox": "vite build --mode firefox",
+    "watch:chromium": "vite build --watch --mode chromium",
+    "watch:firefox": "vite build --watch --mode firefox",
+    "serve:chromium": "web-ext run -t chromium --start-url \"https://services.northwestern.edu/TDNext\" --source-dir ./dist/chromium",
+    "serve:firefox": "web-ext run --start-url \"https://services.northwestern.edu/TDNext\" --source-dir ./dist/firefox",
+    "dev:chromium": "concurrently --restart-tries 5 --restart-after 5000 -c \"bgBlue.bold,bgMagenta.bold\" \"npm:watch:chromium\" \"npm:serve:chromium\"",
+    "dev:firefox": "concurrently --restart-tries 5 --restart-after 5000 -c \"bgBlue.bold,bgMagenta.bold\" \"npm:watch:firefox\" \"npm:serve:firefox\"",
+    "package:chromium": "cross-env zip=1 vite build --mode chromium",
+    "package:firefox": "cross-env zip=1 vite build --mode firefox",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "svelte-navigator": "3.2.2",
+    "svelte-previous": "2.1.1",
+    "tinycolor2": "^1.5.1",
+    "webextension-polyfill": "0.10.0"
+  },
+  "devDependencies": {
+    "@samrum/vite-plugin-web-extension": "2.1.1",
+    "@sveltejs/vite-plugin-svelte": "1.1.0",
+    "@tailwindcss/typography": "0.5.7",
+    "@tsconfig/svelte": "3.0.0",
+    "@types/tinycolor2": "^1.4.3",
+    "@types/webextension-polyfill": "0.9.1",
+    "@types/yazl": "2.4.2",
+    "autoprefixer": "10.4.13",
+    "chalk": "^5.2.0",
+    "concurrently": "7.5.0",
+    "cross-env": "7.0.3",
+    "postcss": "8.4.18",
+    "sass": "^1.57.1",
+    "svelte": "3.52.0",
+    "svelte-check": "2.9.2",
+    "svelte-preprocess": "4.10.7",
+    "tailwindcss": "3.2.2",
+    "tslib": "2.4.1",
+    "typescript": "4.8.4",
+    "vite": "3.2.2",
+    "web-ext": "7.3.1",
+    "yazl": "2.5.1"
+  }
+}
